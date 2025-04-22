@@ -1,9 +1,75 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+/* App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  text-align: center;
 }
 
-img {
+.loading-text {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  animation: pulse 1.5s infinite;
+}
+
+.dog-image-container {
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  max-width: 90%;
+}
+
+.dog-image-container:hover {
+  transform: scale(1.02);
+}
+
+.dog-image {
   max-width: 100%;
+  max-height: 70vh;
+  display: block;
+  border-radius: 10px;
+}
+
+.title {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  padding: 20px;
+  background-color: #fadbd8;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .loading-text {
+    font-size: 1.2rem;
+  }
 }
